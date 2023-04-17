@@ -18,9 +18,6 @@ import com.ufps.dao.PacienteDao;
 import com.ufps.entities.Paciente;
 
 
-
-
-
 /**
  * Servlet implementation class PacienteServlet
  */
@@ -151,9 +148,12 @@ public class PacienteServlet extends HttpServlet {
 			throws ServletException, SQLException, IOException {
 		List<Paciente> listP = new ArrayList<>();
 		listP = pDao.list(); 
+		
+		for(Paciente p: listP) {
+			p.getEdad();
+		}
 		request.setAttribute("listPaciente", listP);
 		showPage(request, response,"pacientelist.jsp");
-
 	}
 
 }

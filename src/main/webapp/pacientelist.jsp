@@ -41,6 +41,7 @@
 	                                <th>Direccion</th>
 	                                <th>Peso</th>
 	                                <th>Estatura</th>
+	                                <th>Edad</th>
 	                                <th>Acciones</th>
 	                            </tr>
 	                        </thead>
@@ -81,6 +82,9 @@
 	                                    </td>
 	                                    <td>
 	                                       <c:out value="${p.estatura}" />
+	                                    </td>
+	                                    <td>
+	                                       <c:out value="${p.edad}" />
 	                                    </td>
 	                                    <td><a href="edit?id=<c:out value='${p.id}' />" style="color:#343a40; text-decoration:underline">Editar</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=<c:out value='${p.id}' />" style="color:#343a40; text-decoration:underline">Eliminar</a></td>
 	                                </tr>
